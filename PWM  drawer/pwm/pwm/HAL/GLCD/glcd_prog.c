@@ -75,7 +75,7 @@ void GLCD_ClearAll()			/* GLCD all display clear function */
 
 /* This Function Display String From custom char */
 
-void GLCD_String(char page_no, char *str,uint8 side)/* GLCD string write function */
+void GLCD_String(char page_no, const char *str,uint8 side)/* GLCD string write function */
 {
 	unsigned int i, column;
 	unsigned int Page = ((0xB8) + page_no);

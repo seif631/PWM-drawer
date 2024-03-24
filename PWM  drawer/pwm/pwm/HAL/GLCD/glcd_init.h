@@ -15,7 +15,7 @@
 void GLCD_Init(void);		/* initiation function */
 void GLCD_Command(char Command);	/* send instruction */
 void GLCD_ClearAll(void);		/* clear all on screen */
-void GLCD_String(char page_no, char *str,uint8 side);		/* Display string from custom char */
+void GLCD_String(char page_no, const char *str,uint8 side);		/* Display string from custom char */
 
 
 

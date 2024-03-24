@@ -106,13 +106,13 @@
     <Compile Include="HAL\GLCD\glcd_prog.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\HEXT_INT\HEXT_Conf.h">
+    <Compile Include="HAL\HTIMER0\HTimer0_conf.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\HEXT_INT\HEXT_Init.h">
+    <Compile Include="HAL\HTIMER0\HTimer0_init.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\HEXT_INT\HEXT_Prog.c">
+    <Compile Include="HAL\HTIMER0\HTimer0_prog.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\HTIMER1\HTimer1_conf.h">
@@ -133,7 +133,7 @@
     <Compile Include="MCAL\DIO\dio_prog.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MCAL\MEXT_INT\MEXT_reg.h">
+    <Compile Include="MCAL\MTIMER0\MTimer0_reg.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\MTIMER1\MTimer1_reg.h">
@@ -148,14 +148,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HAL" />
-    <Folder Include="HAL\HEXT_INT" />
     <Folder Include="HAL\HTIMER1" />
     <Folder Include="HAL\GLCD" />
+    <Folder Include="HAL\HTIMER0" />
     <Folder Include="MCAL" />
     <Folder Include="APP" />
     <Folder Include="MCAL\DIO" />
-    <Folder Include="MCAL\MEXT_INT" />
     <Folder Include="MCAL\MTIMER1" />
+    <Folder Include="MCAL\MTIMER0" />
     <Folder Include="SERV" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

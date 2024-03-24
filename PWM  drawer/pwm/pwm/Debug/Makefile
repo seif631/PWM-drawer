@@ -34,14 +34,14 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../HAL \
-../HAL/HEXT_INT \
 ../HAL/HTIMER1 \
 ../HAL/GLCD \
+../HAL/HTIMER0 \
 ../MCAL \
 ../APP \
 ../MCAL/DIO \
-../MCAL/MEXT_INT \
 ../MCAL/MTIMER1 \
+../MCAL/MTIMER0 \
 ../SERV
 
 
@@ -49,7 +49,7 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../APP/main.c \
 ../HAL/GLCD/glcd_prog.c \
-../HAL/HEXT_INT/HEXT_Prog.c \
+../HAL/HTIMER0/HTimer0_prog.c \
 ../HAL/HTIMER1/HTimer1_prog.c \
 ../MCAL/DIO/dio_prog.c
 
@@ -63,28 +63,28 @@ ASM_SRCS +=
 OBJS +=  \
 APP/main.o \
 HAL/GLCD/glcd_prog.o \
-HAL/HEXT_INT/HEXT_Prog.o \
+HAL/HTIMER0/HTimer0_prog.o \
 HAL/HTIMER1/HTimer1_prog.o \
 MCAL/DIO/dio_prog.o
 
 OBJS_AS_ARGS +=  \
 APP/main.o \
 HAL/GLCD/glcd_prog.o \
-HAL/HEXT_INT/HEXT_Prog.o \
+HAL/HTIMER0/HTimer0_prog.o \
 HAL/HTIMER1/HTimer1_prog.o \
 MCAL/DIO/dio_prog.o
 
 C_DEPS +=  \
 APP/main.d \
 HAL/GLCD/glcd_prog.d \
-HAL/HEXT_INT/HEXT_Prog.d \
+HAL/HTIMER0/HTimer0_prog.d \
 HAL/HTIMER1/HTimer1_prog.d \
 MCAL/DIO/dio_prog.d
 
 C_DEPS_AS_ARGS +=  \
 APP/main.d \
 HAL/GLCD/glcd_prog.d \
-HAL/HEXT_INT/HEXT_Prog.d \
+HAL/HTIMER0/HTimer0_prog.d \
 HAL/HTIMER1/HTimer1_prog.d \
 MCAL/DIO/dio_prog.d
 
@@ -116,7 +116,7 @@ HAL/GLCD/glcd_prog.o: ../HAL/GLCD/glcd_prog.c
 	@echo Finished building: $<
 	
 
-HAL/HEXT_INT/HEXT_Prog.o: ../HAL/HEXT_INT/HEXT_Prog.c
+HAL/HTIMER0/HTimer0_prog.o: ../HAL/HTIMER0/HTimer0_prog.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
 	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega32  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega32__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

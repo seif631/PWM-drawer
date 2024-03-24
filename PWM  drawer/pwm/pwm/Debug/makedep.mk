@@ -6,7 +6,7 @@ APP\main.c
 
 HAL\GLCD\glcd_prog.c
 
-HAL\HEXT_INT\HEXT_Prog.c
+HAL\HTIMER0\HTimer0_prog.c
 
 HAL\HTIMER1\HTimer1_prog.c
 
